@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Dependencies
-          uses: actions/checkout@v2
-          run: npm install
+        uses: actions/checkout@v2
+        run: npm install
       - name: Build
-          run: npm run build
+        run: npm run build
       - name: Deploy
-          uses: peaceiris/actions-gh-pages@v3
-          with: 
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./build
-            publish_branch: gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with: 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
