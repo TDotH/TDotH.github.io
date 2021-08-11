@@ -7,7 +7,7 @@ import { MdEmail } from 'react-icons/md';
 
 function AboutPage(props) {
     return (
-    <div id='AboutPage'>
+    <div id='About-Page'>
         <div className='info-card'>
             <img src={pfp} alt='Me'/>
             <p>Tyde Hashimoto</p>
@@ -21,9 +21,8 @@ function AboutPage(props) {
             <h1>
                 About Me
             </h1>
-            <p>I'm a computer science major from Protland State University that's interested in a lot of things</p>
+            <p>I'm a computer science major from Portland State University that's interested in a lot of things</p>
         </div>
-        
     </div>
     );
 }
