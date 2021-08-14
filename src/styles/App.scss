@@ -4,7 +4,6 @@
   height: 100%;
   width: 100%;
   display: flex;
-  background-color: black;
 }
 
 #Content {
@@ -16,23 +15,20 @@
   flex-direction: column;
   margin-top: auto;
   flex-grow: 1;
-  z-index: 99999;
+  z-index: 9;
 }
 
 #Content > div {
   height: 100vh;
   max-height: 100vh;
   width: 100%;
-  display: flex;
-  background-color: white;   
+  display: flex;   
 }
 
 #Content > div:nth-child(2) {
   margin-bottom: 0;
-  background-color: green;
 }
 
 #Content > div:last-child {
   margin-bottom: 0;
-  background-color: blueviolet;
 }
