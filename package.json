@@ -12,6 +12,7 @@
     "react-icons": "^4.2.0",
     "react-scripts": "4.0.3",
     "sass": "^1.37.5",
+    "three": "^0.131.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
