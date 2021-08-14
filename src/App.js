@@ -3,6 +3,7 @@ import './styles/App.scss';
 import AboutPage from './pages/AboutPage.js';
 import ProjectsPage from './pages/ProjectsPage.js';
 import ContatctPage from './pages/ContactPage.js';
+import CanvasPage from './pages/CanvasPage.js';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 
 function getWindowDimensions() {
@@ -96,6 +97,7 @@ function App() {
 
   return (
     <div className="App">
+      <CanvasPage />
       <Scrollbars 
         autoHeight={true}
         autoHeightMax={height}
