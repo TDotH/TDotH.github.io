@@ -1,3 +1,5 @@
+
+
 #About-Page {
     display: flex;
     align-items: center;
@@ -7,13 +9,15 @@
     background-color: rgba(255, 255, 255, 0.90);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    border-radius: 3px;
+    padding: 0.5em;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     #About-Page {
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
-      background-color: rgba(255, 0, 0, 0.5);  
+      background-color: rgba(255, 255, 255, 0.80);  
     }
     .warning {
       display: none;
@@ -22,9 +26,70 @@
 
 .about {
     align-self: flex-start;
+    margin: 0.5em;
+}
+
+.pfp {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+$info-border-line: black solid 1px;
+
+.name {
+    border-left: $info-border-line;
+    border-right: $info-border-line;
+    border-bottom: $info-border-line;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+$card-border-width: 3px;
+$info-icon-size: 1.5em;
+$info-icon-color: gray;
+$info-card-color: white;
+
+.info-icon {
+    width: $info-icon-size;
+    height: $info-icon-size;
+}
+
+.info-links:link, .info-links:visited {
+    background-color: inherit;
+    color: $info-icon-color;
+    padding: 12px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.225s;
+    border-bottom: $info-border-line
+}
+  
+.info-links:first-child {
+    border-left: $info-border-line;
+    border-bottom-left-radius: 3px;
+}
+
+.info-links:nth-child(2) {
+    border-left: $info-border-line;
+    border-right: $info-border-line;
+}
+
+.info-links:last-child {
+    border-right: $info-border-line;
+    border-bottom-right-radius: 3px;
+}
+
+.info-links:hover, .info-links:active {
+    background-color: $info-icon-color;
+    color: $info-card-color;
 }
 
 .info-card {
     display: flex;
     flex-direction: column;
+    border-right: $card-border-width solid;
+    border-image: linear-gradient(rgba(255, 255, 255, 0.0), rgb(65, 65, 65, 0.5), rgba(255, 255, 255, 0.0)) 1;
+    padding-right: 0.5em;
 }
+
