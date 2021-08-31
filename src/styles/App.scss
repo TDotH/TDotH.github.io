@@ -1,27 +1,44 @@
 .App {
   text-align: center;
-  overflow: auto;
+  overflow: hidden;
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  z-index: 11;
+  top: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.20);  
+}
+
+.header-link {
+  font-size: 14pt;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 #Content {
-  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: auto;
-  flex-grow: 1;
 }
 
 #Content > div {
   height: 100vh;
-  max-height: 100vh;
   width: 100%;
   display: flex;   
+  font-family: inherit;
 }
 
 #Content > div:nth-child(2) {
@@ -30,4 +47,15 @@
 
 #Content > div:last-child {
   margin-bottom: 0;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .header {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.20);   
+  }
+  .warning {
+    display: none;
+  }
 }
