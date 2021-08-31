@@ -3,20 +3,27 @@ import './styles/App.scss';
 import AboutPage from './pages/AboutPage.js';
 import ProjectsPage from './pages/ProjectsPage.js';
 import ContatctPage from './pages/ContactPage.js';
+import WelcomePage from './pages/WelcomePage.js';
+import Background from './images/background.jpg';
+import "@fontsource/ibm-plex-sans"
+
+const style = {
+  backgroundImage: `url(${Background})`,
+  backgroundSize: 'cover',
+  fontFamily: "IBM Plex Sans",
+}
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={ style }>
+      <div className='header'>
+        <p>Header</p>
+      </div>
       <div id="Content">
-        <div>
-          <AboutPage />
-        </div>
-        <div>
-          <ProjectsPage />
-        </div>
-        <div>
-          <ContatctPage />
-        </div>
+        <WelcomePage />
+        <AboutPage />
+        <ProjectsPage />
+        <ContatctPage />
       </div>
     </div>
   );
