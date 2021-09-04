@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/ContactPage.scss';
 
-function ContactPage() {
+function ContactPage(props) {
     return (
-        <div id="Contact-Page">
+        <div id={props.id} className='contact-page'>
             <p>Contacts go here</p>
         </div>
     );

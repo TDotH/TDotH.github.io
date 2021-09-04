@@ -1,9 +1,9 @@
 import React from "react";
 import '../styles/ProjectsPage.scss'
 
-function ProjectsPage() {
+function ProjectsPage(props) {
     return (
-        <div id='Projects-Page'>
+        <div id={props.id} className='projects-page'>
             <p>Projects will go here</p>
         </div>
     );

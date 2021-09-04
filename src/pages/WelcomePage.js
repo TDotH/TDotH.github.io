@@ -6,7 +6,7 @@ import { IconContext } from "react-icons";
 
 function WelcomePage(props) {
     return (
-        <div className='welcome-page'> 
+        <div id={props.id} className='welcome-page'> 
             <div className='welcome-card'>
                 <div className='welcome-text'>
                     <h1>Welcome!</h1>

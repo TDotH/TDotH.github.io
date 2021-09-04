@@ -21,9 +21,46 @@
 }
 
 .header-link {
+  position: relative;
   font-size: 14pt;
   margin-left: 0.5em;
   margin-right: 0.5em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.25s linear, color 0.25s;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+$link-border-shadow: inset 0px -4px 2px -2px rgba(255, 0, 0, 1);
+
+.header-link:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  border-radius: 1px;
+  box-shadow: $link-border-shadow;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.header-link:hover:after {
+  opacity: 1;
+}
+
+.header-link:hover {                                     
+  cursor: pointer;
+  color: white;
+}
+
+.header-link-active {
+  color: white;
+}
+
+.header-link.header-link-active:after {
+  opacity: 1;
 }
 
 #Content {
