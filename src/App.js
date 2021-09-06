@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useLayoutEffect, useRef} from 'react';
 import './styles/App.scss';
 import ProjectsPage from './pages/ProjectsPage.js';
-import ContactPage from './pages/ContactPage.js';
 import WelcomePage from './pages/WelcomePage.js';
 import Background from './images/background.jpg';
 import { Scrollbars } from 'react-custom-scrollbars-2';
@@ -22,10 +21,6 @@ const pages = [
     name: 'Projects',
     page: (id) => <ProjectsPage key={id} id={id}/>
   },
-  {
-    name: 'Contact',
-    page: (id) => <ContactPage key={id} id={id}/>
-  }
 ];
 
 function getWindowDimensions() {
